@@ -1,0 +1,19 @@
+h2 Products
+if products.length == 0
+    br
+    h4 Empty list. Add products to see.
+else
+    table(class="table")
+        thead
+            tr
+                th(scope="col") id
+                th(scope="col") name
+                th(scope="col") price
+                th(scope="col") inStock 
+        tbody
+            each product in products ? products : []
+                tr
+                    th(scope="row")=product.id
+                    td=product.name
+                    td=product.price 
+                    td=product.inStock
