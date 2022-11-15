@@ -1,6 +1,6 @@
 <h2>Products</h2>
 <div class="entry">
-    <% if (products.length != 0) { %>
+    <% if (products[0].length != 0) { %>
         <table class="table">
             <thead>
                 <tr>
@@ -11,18 +11,17 @@
                 </tr>
             </thead>
             <tbody>
-                <% for (let i = 0; i < products.length; i++) { %>
+                <% for (let i = 0; i < products[0].length; i++) { %>
                     <tr>
-                        <td><%= products[i].id %></td>
-                        <td><%= products[i].name %></td>
-                        <td><%= products[i].price %></td>
-                        <td><%= products[i].inStock %></td>
+                        <td><%= products[0][i].id %></td>
+                        <td><%= products[0][i].name %></td>
+                        <td><%= products[0][i].price %></td>
+                        <td><%= products[0][i].inStock %></td>
                     </tr>
-                <% }  %>
+                <% }; %>
             </tbody>
         </table>
-    <% } else {%>
-        <br>
+    <% } else { %>
         <h4> Empty list. Add products to see. </h4>
     <% } %>
 </div>

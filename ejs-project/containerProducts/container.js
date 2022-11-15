@@ -14,7 +14,7 @@ class Container {
                 id: this.id
             };
             this.products.push(newProduct);
-            console.log(this.products);
+            return this.products;
         }
         catch (err) {
             console.log(`Reading ERR! ${err}`);
@@ -35,9 +35,8 @@ class Container {
         }
     };
 
-    async getAll(req, res) {
+    get getAll() {
         try {
-            console.log(this.products);
             return (this.products);
         }
         catch (err) {
